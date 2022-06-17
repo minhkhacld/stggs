@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/stggs/static/css/main.f1bb6ecf.css",
+    "main.js": "/stggs/static/js/main.4b4cfb7d.js",
+    "static/media/ic_launcher.png": "/stggs/static/media/ic_launcher.05e2683e4a5ce64492f4.png",
+    "static/media/best_seller.png": "/stggs/static/media/best_seller.b7b42b4742d84244f9b9.png",
+    "index.html": "/stggs/index.html",
+    "main.f1bb6ecf.css.map": "/stggs/static/css/main.f1bb6ecf.css.map",
+    "main.4b4cfb7d.js.map": "/stggs/static/js/main.4b4cfb7d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f1bb6ecf.css",
+    "static/js/main.4b4cfb7d.js"
+  ]
+}

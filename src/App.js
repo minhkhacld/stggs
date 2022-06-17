@@ -6,10 +6,11 @@ import routes from './routes';
 const App = () => {
 
   return (
-
-    <div className="h-screen w-12/12 bg-white-100 flex-col justify-center content-center overflow-y-scroll overflow-x-hidden"
-    >
+    <>
+      {/* // <div className="h-screen w-full bg-white-100 
+    // overflow-y-scroll"> */}
       {/* <Navbar /> */}
+
       <Routes>
         {
           routes.map(({ path, element }) => (
@@ -19,7 +20,9 @@ const App = () => {
         <Route path='*' element={<Navigate path='/' replace />} />
       </Routes>
 
-    </div>
+      {/* </div> */}
+    </>
+
   );
 
 };

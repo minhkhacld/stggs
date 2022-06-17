@@ -37,7 +37,7 @@ const Pricing = () => {
     ];
 
     return (
-        <div className=" w-full relative flex flex-col  items-center justify-center pb-10">
+        <div className=" w-full relative flex flex-col  items-center justify-center pb-10" id="pricing">
             <div className="w-full flex flex-col justify-center content-center items-center">
                 <h2 className="items-center mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">Pricing Plans</h2>
                 <p className="mt-4 text-xl text-gray-500 lg:mx-auto p-2">Start using for free, and then business growing up. Account plans unblock additional features.</p>
@@ -45,7 +45,8 @@ const Pricing = () => {
             <div className="w-full mt-10 gap-10 flex flex-col sm:flex-row justify-center item-center content-center ">
                 {
                     pricing.map((item, index) => (
-                        <div className="w-full min-h-[600px] sm:w-3/12 flex flex-row justify-center item-center" key={index}>
+                        <div className="w-full min-h-[600px] sm:w-3/12 flex flex-row justify-center item-center custom_pricing_class" key={index}                   
+                        >
 
                             <div className="w-10/12 sm:w-full divide-y divide-gray-400  border border-slate-400 shadow-md rounded-3xl flex flex-col justify-start 
                             content-center pt-5 pb-2">

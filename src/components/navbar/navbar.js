@@ -2,21 +2,17 @@ import React, { Fragment } from 'react';
 import { Popover, Transition } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import { useLocation } from 'react-router-dom';
+import routes from '../../routes';
 
 const Navbar = () => {
 
     const location = useLocation().pathname;
     const path = location.split("/");
-
-    const navigation = [
-        { name: 'Home', href: '/' },
-        { name: 'Support', href: '/support' },
-        { name: 'Download', href: '/download' },
-        { name: 'Docs', href: '/docs' },]
+    // console.log(path);
 
     return (
         <Popover>
-            <div className={`relative p-5 px-4 sm:px-6 lg:px-8 ${path[1] !== "" && "lg:shadow-md"}`}>
+            <div className={`relative p-5 px-4 sm:px-6 lg:px-8 ${path[path.length - 1] !== "" && "lg:shadow-md"}`}>
                 <nav className="relative flex items-center justify-between sm:h-10 lg:justify-start" aria-label="Global">
                     <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
                         <div className="flex items-center justify-between w-full md:w-auto">
@@ -37,8 +33,8 @@ const Navbar = () => {
                         </div>
                     </div>
                     <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
-                        {navigation.map((item, index) => (
-                            <a key={index} href={item.href} className="font-medium text-gray-500 hover:text-gray-900">
+                        {routes.map((item, index) => (
+                            <a key={index} href={item.path} className="font-medium text-gray-500 hover:text-gray-900">
                                 {item.name}
                             </a>
                         ))}
@@ -63,7 +59,7 @@ const Navbar = () => {
                             <div>
                                 <img
                                     className="h-8 w-auto"
-                                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                                    src={require("../../assets/pictures/ic_launcher.png")}
                                     alt=""
                                 />
                             </div>
@@ -75,22 +71,22 @@ const Navbar = () => {
                             </div>
                         </div>
                         <div className="px-2 pt-2 pb-3 space-y-1">
-                            {navigation.map((item, index) => (
+                            {routes.map((item, index) => (
                                 <a
                                     key={index}
-                                    href={item.href}
+                                    href={item.path}
                                     className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
                                 >
                                     {item.name}
                                 </a>
                             ))}
                         </div>
-                        <a
+                        {/* <a
                             href="#"
                             className="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100"
                         >
                             Log in
-                        </a>
+                        </a> */}
                     </div>
                 </Popover.Panel>
             </Transition>

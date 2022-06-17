@@ -1,0 +1,44 @@
+.feature_scroll_animated {
+  animation: feature_animated 2s ease-in-out forwards;
+}
+
+@keyframes feature_animated {
+  from {
+    transform: translateX(100px);
+    opacity: 0.2;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.pricing_scroll_animated {
+  animation: pricing_animated 2s ease-in-out forwards;
+}
+
+@keyframes pricing_animated {
+  from {
+    transform: translateX(-100px);
+    opacity: 0.2;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.contact_scroll_animated {
+  animation: contact_animated 2s ease-in-out forwards;
+}
+
+@keyframes contact_animated {
+  from {
+    transform: translateY(-100px);
+    opacity: 0.2;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}

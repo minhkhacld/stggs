@@ -12,8 +12,8 @@ const Download = () => {
             <Navbar />
 
             <div className="relative w-full h-full flex flex-col md:flex-row sm:flex-row justify-center items-center"
-            style={{ backgroundImage: `url(${background})`, backgroundPosition: "center", backgroundSize: 'cover' }}
-            >          
+                style={{ backgroundImage: `url(${background})`, backgroundPosition: "center", backgroundSize: 'cover' }}
+            >
                 {/* <object data={background} type="image/svg+xml"
                     className="absolute bottom-0 z-1 opacity-70"
                 ></object> */}

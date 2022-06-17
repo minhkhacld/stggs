@@ -1,9 +1,8 @@
-import React from 'react';
-import axios from 'axios';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faLocationPin } from '@fortawesome/free-solid-svg-icons';
-import { ColCenter } from '../ui/custom_tag';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Alert } from "@material-tailwind/react";
+import axios from 'axios';
+import React from 'react';
 
 const Contact = () => {
 
@@ -34,6 +33,7 @@ const Contact = () => {
     };
 
     const onSumitForm = async (e) => {
+
         e.preventDefault();
         setSending(true)
         let data = {
@@ -54,6 +54,7 @@ const Contact = () => {
                 }
             ]
         }
+
         await axios.post(`${process.env.REACT_APP_API_EMAIL}`, { data: data }, {
             headers: {
                 'Content-Type': 'text/plain;charset=utf-8',
@@ -75,11 +76,11 @@ const Contact = () => {
     ]
 
     return (
-        <div className="relative w-full h-full min-h-[800px] flex flex-col sm:flex-row justify-center items-center">
+        <div className="relative w-full h-full min-h-[900px] flex flex-col sm:flex-row justify-center items-center" id="contact">
             <div className="w-[50%] flex flex-row justify-end items-center">
                 <div className="w-full sm:w-[70%] pb-10 sm:pb-0">
                     {ownerInfo.map((item, index) => (
-                        <div key={index} className="w-full flex flex-row justify-center items-center mb-10">
+                        <div key={index} className="w-full flex flex-row justify-center items-center mb-10 custom_contact_class">
                             <div className="w-3/12 flex flex-col justify-center items-center ">
                                 <FontAwesomeIcon icon={item.icon} className="text-5xl text-[#FF00C3]" />
                             </div>
@@ -88,25 +89,17 @@ const Contact = () => {
                                 <p className="w-full text-5 select-all">{item.text}</p>
                             </div>
                         </div>
-                        
-                        // <div class="grid grid-rows-3 grid-flow-col gap-4" key={index}>
-                        //     <div className="row-span-3">
-                        //         <FontAwesomeIcon icon={item.icon} className=" min-w-[100px] text-3xl text-[#ff00c3]" />
-                        //     </div>
-                        //     <div class="col-span-2 text-2xl">{item.title}</div>
-                        //     <div class="row-span-2 col-span-2">{item.text}</div>
-                        // </div>
                     ))
                     }
                 </div>
             </div>
-            <div className="relative w-[90%] sm:w-[50%] h-[90%] p-2">
-                <div className="w-[100%] sm:w-[70%] h-full flex flex-col justify-center items-center border-2 rounded-3xl shadow-md">
+            <div className="relative w-[90%] sm:w-[50%] h-full p-2">
+                <div className="w-[100%] sm:w-[70%] h-full flex flex-col justify-center items-center rounded-3xl shadow-xl">
                     <div className="h-[20%] flex flex-col justify-center items-center">
                         <p className="w-full h-30 text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">Contact</p>
                         <p className="mt-4 text-xl text-gray-500">Leave a message to me.</p>
                     </div>
-                    <form className="w-[90%] h-[80%] min-h-[400px] flex flex-col justify-start items-center">
+                    <form className="w-[90%] h-[80%] min-h-[600px] flex flex-col justify-start items-center">
                         <label className="w-full h-8 text-slate-600">Name</label>
                         <input
                             placeholder="Type name"
@@ -122,6 +115,11 @@ const Contact = () => {
                             maxLength={500}
                             rows={5} cols={1} type="text" value={user.message} onChange={(e) => onChangeMessage(e.target.value)}
                             required />
+
+                        {
+                            sending &&
+                            <Alert>Message has already been sent, I will check it as soon as possible.</Alert>
+                        }
                         <button type="submit" className="w-4/12 bg-[#c542a6] h-[50px] rounded-3xl mt-4 text-white hover:bg-[#ff00c3]"
                             onClick={(e) => onSumitForm(e)} >Send</button>
                     </form>

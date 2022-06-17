@@ -1,5 +1,6 @@
 import React from 'react';
-import { AnnotationIcon, GlobeAltIcon, LightningBoltIcon, ScaleIcon } from '@heroicons/react/outline'
+import { faNetworkWired, faFileExport, faShareAlt, faPaperPlane, faEdit, faAngleDoubleRight, faSearch, faTag } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Feature = () => {
 
@@ -8,49 +9,49 @@ const Feature = () => {
       name: 'Custom Schemas',
       description:
         'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-      icon: GlobeAltIcon,
+      icon: faNetworkWired,
     },
     {
       name: 'Manual Editing',
       description:
         'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-      icon: ScaleIcon,
+      icon: faEdit,
     },
     {
       name: 'Settings Export',
       description:
         'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-      icon: LightningBoltIcon,
+      icon: faFileExport,
     },
     {
       name: 'Continuous Scanning',
       description:
         'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-      icon: AnnotationIcon,
+      icon: faAngleDoubleRight,
     },
     {
       name: 'Background sending',
       description:
         'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-      icon: LightningBoltIcon,
+      icon: faShareAlt,
     },
     {
-      name: 'Continuous Scanning',
+      name: 'Search QR, Barcode with google',
       description:
         'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-      icon: AnnotationIcon,
+      icon: faSearch,
     },
     {
       name: 'Automated Sending',
       description:
         'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-      icon: AnnotationIcon,
+      icon: faPaperPlane,
     },
     {
       name: 'User-Defined Labels',
       description:
         'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-      icon: AnnotationIcon,
+      icon: faTag,
     },
   ];
 
@@ -74,7 +75,8 @@ const Feature = () => {
               <div key={index} className="relative">
                 <dt>
                   <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-[#c542a6] text-white">
-                    <feature.icon className="h-6 w-6" aria-hidden="true" />
+                    {/* <feature.icon className="h-6 w-6" aria-hidden="true" /> */}
+                    <FontAwesomeIcon icon={feature.icon} className="h-6 w-6" />
                   </div>
                   <p className="ml-16 text-lg leading-6 font-medium text-gray-900">{feature.name}</p>
                 </dt>

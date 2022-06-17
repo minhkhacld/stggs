@@ -7,7 +7,7 @@ import Pricing from './pricing/pricing';
 const Home = () => {
 
     return (
-        <div className="bg-white w-full h-full">
+        <div className="bg-white w-full h-full" id="home-container">
             <Heroic />
             <Feature />
             <Pricing />

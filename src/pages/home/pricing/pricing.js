@@ -68,7 +68,7 @@ const Pricing = () => {
                                         item.includes.map((feature, featureIndex) => (
                                             <div key={featureIndex} className="flex flex-row justify-center items-center w-full mt-3">
                                                 <FontAwesomeIcon icon={feature.status === 0 ? faXmark : faCheck}
-                                                    color={feature.status === 0 ? 'red' : 'green'} size={20}
+                                                    color={feature.status === 0 ? 'red' : 'green'} className="h-6 w-6"
                                                 />
                                                 <p className="w-8/12 text-left pl-1.5">{feature.name}</p>
                                             </div>

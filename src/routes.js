@@ -1,6 +1,5 @@
 import { Home, Support, Docs, Download } from './pages/pages';
 
-
 const routes = [
     { path: '/', element: <Home /> },
     { path: '/support', element: <Support /> },

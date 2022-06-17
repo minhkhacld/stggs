@@ -94,7 +94,7 @@ const Contact = () => {
                 </div>
             </div>
             <div className="relative w-[90%] sm:w-[50%] h-full p-2">
-                <div className="w-[100%] sm:w-[70%] h-full flex flex-col justify-center items-center rounded-3xl shadow-xl">
+                <div className="w-[100%] sm:w-[70%] h-full flex flex-col justify-center items-center rounded-3xl shadow-2xl">
                     <div className="h-[20%] flex flex-col justify-center items-center">
                         <p className="w-full h-30 text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">Contact</p>
                         <p className="mt-4 text-xl text-gray-500">Leave a message to me.</p>

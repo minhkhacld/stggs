@@ -1,7 +1,6 @@
-import React from 'react';
 import Navbar from '../../components/navbar/navbar';
+import { RowCenter } from '../../components/ui/custom_tag';
 import { Footer } from '../pages';
-import { RowCenter, RowLeft, Row } from '../../components/ui/custom_tag';
 
 const Docs = () => {
 
@@ -57,7 +56,7 @@ const Docs = () => {
 
             <Navbar />
 
-            <RowCenter>
+            <RowCenter className="min-h-[90vh]">
 
                 <div className="w-full h-full flex flex-col justify-start items-center">
                     {instruction.map((item, index) => (

@@ -17,7 +17,7 @@ export default function Support() {
 
             <Navbar />
 
-            <div className="w-full h-full flex flex-col md:flex-row sm:flex-row justify-center items-center"
+            <div className="w-full h-full  min-h-[90vh] flex flex-col md:flex-row sm:flex-row justify-center items-center"
                 style={{ backgroundImage: `url(${background})`, backgroundPosition: "center", backgroundSize: 'cover' }}
             >
                 {/* <object data={background} type="image/svg+xml"
@@ -34,7 +34,7 @@ export default function Support() {
 
                 <div className="w-full md:w-6/12  h-full pl-10 pr-10 flex flex-col justify-center items-center">
 
-                    <div className="bg-white p-10 shadow-lg rounded-2xl border-slate-500">
+                    <div className="bg-white p-10 shadow-2xl rounded-2xl border-slate-500">
                         <Accordion open={open === 1} onClick={() => handleOpen(1)}>
                             <AccordionHeader>What is Scan to google Sheets?</AccordionHeader>
                             <AccordionBody>
@@ -43,7 +43,7 @@ export default function Support() {
                         </Accordion>
 
                         <Accordion open={open === 2} onClick={() => handleOpen(2)}>
-                            <AccordionHeader>Which kind of business Scan to google Sheets can be use?</AccordionHeader>
+                            <AccordionHeader>What kind of business Scan to google Sheets can be use?</AccordionHeader>
                             <AccordionBody>
                                 Scan to google Sheets can be use for inventory management, attendance tracking, store management, and any kind of business that use QR, Barcode for tracking and management.
                             </AccordionBody>

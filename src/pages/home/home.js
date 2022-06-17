@@ -8,10 +8,6 @@ import './home.css';
 const Home = () => {
 
     window.onscroll = () => {
-
-        // const container = document.getElementById('home_container');
-        // const heroic = document.getElementById('heroic');
-
         const feature = document.getElementById('feature');
         const pricing = document.getElementById('pricing');
         const contact = document.getElementById('contact');
@@ -19,10 +15,13 @@ const Home = () => {
         const features = document.getElementsByClassName("custom_feature_class");
         const pricings = document.getElementsByClassName("custom_pricing_class");
         const contacts = document.getElementsByClassName("custom_contact_class");
-        // console.log('console', document.documentElement.scrollTop || document.body.scrollTop);
-        // console.log(window.scrollY, feature.offsetTop, pricing.offsetTop, contact.offsetTop);
-
-        if (scrollY >= feature.offsetTop + 20 && scrollY < pricing.offsetTop) {
+        // console.log(window.scrollY,heroic.offsetHeight, feature.offsetTop, feature.offsetHeight,);
+        if (scrollY < feature.offsetTop) {         
+            [...features].forEach(d => {
+                d.classList.remove("feature_scroll_animated");
+            });
+        }
+        else if (scrollY >= feature.offsetTop - 500 && scrollY < pricing.offsetTop - 100) {          
             [...features].forEach(d => {
                 d.classList.add("feature_scroll_animated");
             });
@@ -30,7 +29,7 @@ const Home = () => {
                 d.classList.remove("pricing_scroll_animated");
             });
 
-        } else if (scrollY >= pricing.offsetTop + 20 && scrollY < contact.offsetTop) {
+        } else if (scrollY >= pricing.offsetTop - 300 && scrollY < contact.offsetTop - 100) {
             [...features].forEach(d => {
                 d.classList.remove("feature_scroll_animated");
             });
@@ -41,7 +40,7 @@ const Home = () => {
                 d.classList.remove("contact_scroll_animated");
             });
 
-        } else if (scrollY >= contact.offsetTop + 20) {
+        } else if (scrollY >= contact.offsetTop - 300) {
             [...pricings].forEach(d => {
                 d.classList.remove("pricing_scroll_animated");
             });
@@ -49,6 +48,35 @@ const Home = () => {
                 d.classList.add("contact_scroll_animated");
             });
         };
+
+        // if (scrollY >= feature.offsetTop - 100 && scrollY < pricing.offsetTop) {
+        //     [...features].forEach(d => {
+        //         d.classList.add("feature_scroll_animated");
+        //     });
+        //     [...pricings].forEach(d => {
+        //         d.classList.remove("pricing_scroll_animated");
+        //     });
+
+        // } else if (scrollY >= pricing.offsetTop - 100 && scrollY < contact.offsetTop) {
+        //     [...features].forEach(d => {
+        //         d.classList.remove("feature_scroll_animated");
+        //     });
+        //     [...pricings].forEach(d => {
+        //         d.classList.add("pricing_scroll_animated");
+        //     });
+        //     [...contacts].forEach(d => {
+        //         d.classList.remove("contact_scroll_animated");
+        //     });
+
+        // } else if (scrollY >= contact.offsetTop - 100) {
+        //     [...pricings].forEach(d => {
+        //         d.classList.remove("pricing_scroll_animated");
+        //     });
+        //     [...contacts].forEach(d => {
+        //         d.classList.add("contact_scroll_animated");
+        //     });
+        // };
+
     };
 
     return (

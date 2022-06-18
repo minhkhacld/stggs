@@ -45,9 +45,8 @@ const Pricing = () => {
             <div className="w-full mt-10 gap-10 flex flex-col sm:flex-row justify-center item-center content-center ">
                 {
                     pricing.map((item, index) => (
-                        <div className="w-full min-h-[600px] sm:w-3/12 flex flex-row justify-center item-center custom_pricing_class" key={index}
+                        <div className="w-full min-h-[600px] sm:w-3/12 flex flex-row justify-center item-center custom_pricing_class opacity-0" key={index}
                         >
-
                             <div className="w-10/12 sm:w-full divide-y divide-gray-400  border-slate-400 shadow-2xl rounded-3xl flex flex-col justify-start 
                             content-center pt-5 pb-2">
 

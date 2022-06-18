@@ -1,6 +1,4 @@
 import React from 'react';
-import Navbar from '../../components/navbar/navbar';
-import Footer from '../../components/footer/footer';
 import background from '../../assets/pictures/wave.svg';
 
 const Download = () => {
@@ -8,7 +6,6 @@ const Download = () => {
     return (
         <div className="w-full h-full overflow-y-auto">
 
-            <Navbar />
 
             <div className="relative w-full h-full  min-h-[100vh] sm:min-h-[90vh] flex flex-col md:flex-row sm:flex-row justify-center items-center"
                 style={{ backgroundImage: `url(${background})`, backgroundPosition: "center", backgroundSize: 'cover' }}
@@ -56,7 +53,6 @@ const Download = () => {
                 </div>
             </div>
 
-            <Footer />
         </div>
     );
 };

@@ -1,8 +1,7 @@
-import { useState, Fragment } from "react";
-import { Accordion, AccordionHeader, AccordionBody } from "@material-tailwind/react";
-import Navbar from '../../components/navbar/navbar';
-import Footer from '../../components/footer/footer';
+import { Accordion, AccordionBody, AccordionHeader } from "@material-tailwind/react";
+import { useState } from "react";
 import background from '../../assets/pictures/wave.svg';
+import React from 'react';
 
 export default function Support() {
 
@@ -15,24 +14,20 @@ export default function Support() {
     return (
         <div className="w-full h-full">
 
-            <Navbar />
 
             <div className="w-full h-full  min-h-[90vh] flex flex-col md:flex-row sm:flex-row justify-center items-center"
                 style={{ backgroundImage: `url(${background})`, backgroundPosition: "center", backgroundSize: 'cover' }}
             >
-                {/* <object data={background} type="image/svg+xml"
-                    className="w-full absolute bottom-0 -z-1 opacity-70"
-                ></object> */}
 
                 <div className="w-6/12 h-full flex flex-col justify-center items-center">
 
-                    <div className="w-[100%] md:w-[70%]  text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl">
+                    <div className="w-[100%] md:w-[70%] text-4xl tracking-tight font-extrabold text-black sm:text-white sm:text-5xl md:text-6xl">
                         We are here to help you
                     </div>
 
                 </div>
 
-                <div className="w-full md:w-6/12  h-full pl-10 pr-10 flex flex-col justify-center items-center">
+                <div className="w-full md:w-6/12  h-full pl-10 pr-10 flex flex-col justify-center items-center overflow-y-auto  mb-10">
 
                     <div className="bg-white p-10 shadow-2xl rounded-2xl border-slate-500">
                         <Accordion open={open === 1} onClick={() => handleOpen(1)}>
@@ -68,7 +63,6 @@ export default function Support() {
                 </div>
             </div>
 
-            <Footer />
         </div>
     );
 }

@@ -61,7 +61,7 @@ const Docs = () => {
             <RowCenter className="min-h-[90vh]">
 
                 <div className="w-full h-full  p-4 flex flex-col justify-start items-center">
-                    <div className="font-bold text-5xl mt-10">Public Sheet Set-up Guide</div>
+                    <div className="font-bold text-4xl sm:text-5xl mt-10">Public Sheet Set-up Guide</div>
                     <p className="font-medium text-slate-400 text-xl mt-10">This guide assumes you are using Google Sheets from a web browser or mobile device.</p>
                     {instruction.map((item, index) => (
                         <div key={index} className={`mb-10 w-full sm:w-8/12 gap-10 mt-10 flex flex-col ${index % 2 === 0 ? 'sm:flex-row-reverse' : 'sm:flex-row'} justify-center item-center`}>
